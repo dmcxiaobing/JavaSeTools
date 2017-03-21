@@ -24,12 +24,18 @@ import com.qq986945193.javasetools.constant.Api;
  */
 public class TcpClientSocket {
 	public static void main(String[] args) {
+		InputStream iStream = null;
+		Socket socket = null;
+		OutputStream outputStream = null;
+		PrintWriter pwriter = null;
+		BufferedReader br = null;
 		try {
 			// 创建客户端Socket，指定服务器地址和端口
-			Socket socket = new Socket(Api.LOCAL_HOST, Integer.parseInt(Api.TCP_SERVER_PORT));
+			socket = new Socket(Api.LOCAL_HOST,
+					Integer.parseInt(Api.TCP_SERVER_PORT));
 			// 获取输出流，向服务端发送消息
-			OutputStream outputStream = socket.getOutputStream();
-			PrintWriter pwriter = new PrintWriter(outputStream);
+			outputStream = socket.getOutputStream();
+			pwriter = new PrintWriter(outputStream);
 			pwriter.write("username：david,password:qq986945193");
 			pwriter.flush();
 			// 关闭输出流
@@ -37,8 +43,8 @@ public class TcpClientSocket {
 			/**
 			 * 获取输入流，并且读取服务端的响应信息
 			 */
-			InputStream iStream = socket.getInputStream();
-			BufferedReader br = new BufferedReader(new InputStreamReader(iStream));
+			iStream = socket.getInputStream();
+			br = new BufferedReader(new InputStreamReader(iStream));
 			String info = null;
 			while ((info = br.readLine()) != null) {
 				System.out.println("服务器说:" + info);
@@ -58,6 +64,27 @@ public class TcpClientSocket {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} finally {
+			try {
+				if (br != null) {
+					br.close();
+				}
+				if (iStream != null) {
+					iStream.close();
+				}
+				if (pwriter != null) {
+					pwriter.close();
+				}
+				if (outputStream != null) {
+					outputStream.close();
+				}
+				if (socket != null) {
+					socket.close();
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}
 		}
 
 	}
