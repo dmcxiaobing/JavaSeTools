@@ -28,7 +28,9 @@ Boolean类的变态之处不在于其equals()方法。而是在于Boolean对象�
  
 1、先用“==”判断是否相等。
  
-2、判断equals()方法的参数是否为null，如果为null，则返回false；因为当前对象不可能为null，如果为null，则不能调用其equals()方法，否则抛java.lang.NullPointerException异常。
+2、判断equals()方法的参数是否为null，如果为null，则返回false；因为当前对象不可能为null，如果为null，则不能调用其equals()方法，
+
+否则抛java.lang.NullPointerException异常。
  
 3、当参数不为null，则如果两个对象的运行时类（通过getClass()获取）不相等，返回false，否则继续判断。
  
