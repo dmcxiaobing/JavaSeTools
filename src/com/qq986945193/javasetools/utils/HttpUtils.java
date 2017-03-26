@@ -1,5 +1,13 @@
 package com.qq986945193.javasetools.utils;
 
+/**
+ * @Author ：程序员小冰
+ * @新浪微博 ：http://weibo.com/mcxiaobing
+ * @GitHub: https://github.com/QQ986945193
+ * @CSDN博客: http://blog.csdn.net/qq_21376985
+ * @OsChina空间: https://my.oschina.net/mcxiaobing
+ */
+
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -9,7 +17,7 @@ import java.io.PrintWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-//Http请求的工具类
+//Http请求的工具类 这里使用HttpUrlConnection封装
 public class HttpUtils {
 
     private static final int TIMEOUT_IN_MILLIONS = 5000;
