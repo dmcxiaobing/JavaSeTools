@@ -22,6 +22,25 @@ public class HttpUtils {
 
     private static final int TIMEOUT_IN_MILLIONS = 5000;
 
+    public static void main(String[] args) {
+	try {
+	    doPostAsyn("http://127.0.0.1:8080/JavaWebBase/LoginActionServlet", "username=admin&password=123456", new CallBack() {
+	        
+	        @Override
+	        public void onRequestComplete(String result) {
+	    	// TODO Auto-generated method stub
+	    		System.out.println(result);
+	        }
+	    });
+	} catch (Exception e) {
+	    // TODO Auto-generated catch block
+	    e.printStackTrace();
+	}
+    }
+    /**
+     * 接收返回的结果
+     *
+     */
     public interface CallBack {
 	void onRequestComplete(String result);
     }
