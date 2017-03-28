@@ -1,10 +1,12 @@
 package com.qq986945193.javasetools.knowledge;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.HashMap;
 
 import org.apache.commons.beanutils.BeanUtils;
 
 import com.qq986945193.javasetools.daomin.DavidBean;
+import com.sun.javafx.collections.MappingChange.Map;
 
 /**
  * @Author ：程序员小冰
@@ -28,10 +30,18 @@ public class BeanUtilsIntroduce {
 	private static void setPropertyMethod() throws IllegalAccessException, InvocationTargetException {
 		// TODO Auto-generated method stub
 		DavidBean bean = new DavidBean();
-		//使用第三方库beanutils操作javabean的属性
+		//使用第三方库beanutils操作javabean的属性  支持8种基本类型自动转换
 		BeanUtils.setProperty(bean, "name", "java");
 		BeanUtils.setProperty(bean, "age", 12);
 		BeanUtils.setProperty(bean, "marry", true);
+		System.out.println(bean);
+		//利用map进行设置javabean的属性
+		HashMap map = new HashMap();
+		map.put("name", "david");
+		map.put("age", 99);
+		map.put("marry", false);
+		//用map结合填充bean属性时，map关键词和bean属性要一致
+		BeanUtils.populate(bean, map);
 		System.out.println(bean);
 	}
 }
