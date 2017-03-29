@@ -21,8 +21,14 @@ public class DavidBean {
 		this.marry = marry;
 	}
 
+	public DavidBean(String name) {
+		super();
+		this.name = name;
+	}
+
 	public DavidBean() {
 		super();
+		System.out.println("我是无参构造方法");
 	}
 
 	public String getName() {
