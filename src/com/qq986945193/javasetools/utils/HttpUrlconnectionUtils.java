@@ -20,7 +20,7 @@ import java.net.URL;
 import com.qq986945193.javasetools.constant.Api;
 
 //Http请求的工具类 这里使用HttpUrlConnection封装
-public class HttpUtils {
+public class HttpUrlconnectionUtils {
 
 	private static final int TIMEOUT_IN_MILLIONS = 5000;
 
@@ -35,16 +35,23 @@ public class HttpUtils {
 						@Override
 						public void onRequestComplete(String result) {
 							// TODO Auto-generated method stub
-							System.out.println("post:"+result);
+							System.out.println("post:" + result);
 						}
 					});
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		//get请求测试。
-		String jsonString = doGet("http://127.0.0.1:8080/JavaWebBase/LoginActionServlet?username=admin&password=123456");
-		System.out.println("get:"+jsonString);
+		// get请求测试。
+		doGetAsyn("http://127.0.0.1:8080/JavaWebBase/LoginActionServlet?username=admin&password=123456",
+				new CallBack() {
+
+					@Override
+					public void onRequestComplete(String result) {
+						System.out.println("get:" + result);
+					}
+				});
+
 	}
 
 	/**
