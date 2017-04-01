@@ -25,6 +25,7 @@ public class ArrayIntroduce {
 		for (int i : arrs) {
 			System.out.println(i);
 		}
+		System.out.println(Arrays.toString(arrs));
 	}
 
 }
