@@ -6,7 +6,6 @@ import java.util.HashMap;
 import org.apache.commons.beanutils.BeanUtils;
 
 import com.qq986945193.javasetools.daomin.DavidBean;
-import com.sun.javafx.collections.MappingChange.Map;
 
 /**
  * @Author ：程序员小冰
