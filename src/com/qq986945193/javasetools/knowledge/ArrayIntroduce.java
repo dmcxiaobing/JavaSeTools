@@ -18,14 +18,15 @@ public class ArrayIntroduce {
 		ArraySort();
 	}
 
-	// 利用sort进行从大到小排序
+	// 利用sort进行从大小排序
 	private static void ArraySort() {
 		int[] arrs = { 3, 2, 4, 6, 1 };
 		Arrays.sort(arrs);
+		System.out.println(Arrays.toString(arrs));
 		for (int i : arrs) {
 			System.out.println(i);
 		}
-		System.out.println(Arrays.toString(arrs));
+	
 	}
 
 }
