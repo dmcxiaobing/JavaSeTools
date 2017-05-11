@@ -4,8 +4,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
-import org.junit.Test;
-
 /**
  * @Author ：程序员小冰
  * @新浪微博 ：http://weibo.com/mcxiaobing
