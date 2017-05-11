@@ -13,8 +13,9 @@ package com.qq986945193.javasetools.knowledge;
  *
  */
 public class StringIntroduce {
-
 	public static void main(String[] args) {
+	     String tcpStr = "AT+CWSAP_DEF=" + "\"DALIGE\"" + "," + "\"12345678\"" + "," + "11,4";
+
 		// 转义字符串两边含有双引号
 		String str1 = "\"david\"";
 		System.out.println("转义字符串两边含有双引号：" + str1);
@@ -29,5 +30,6 @@ public class StringIntroduce {
 		userName = "java";
 		String str4 = '\"' + userName + '\"';
 		System.out.println("变量使用双引号包括:" + str4);
+		System.out.println(tcpStr);
 	}
 }

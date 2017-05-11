@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/Java JDK VM 1.8.0_u66 Windows"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-beanutils-1.8.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-logging-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/httpclient-4.5.3.jar" sourcepath="C:/Users/anenda_app/Downloads/httpcomponents-client-4.5.3-bin/httpcomponents-client-4.5.3/lib/httpcore-4.4.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-codec-1.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/httpcore-4.4.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/httpmime-4.5.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/zxing-core-3.3.0.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
