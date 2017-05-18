@@ -57,6 +57,7 @@ public class QRCode {
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("生成失败");
+			
 		}
 	}
 
