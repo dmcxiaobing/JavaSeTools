@@ -57,8 +57,10 @@ public class QRCode {
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("生成失败");
+			
 		}
 	}
+
 
 	/**
 	 * 将二维码解析为文字

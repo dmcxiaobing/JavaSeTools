@@ -21,6 +21,7 @@ public class byteIntroduce {
 		System.out.println(b[0]);
 		System.out.println(b[1]);
 		//66  -82
+		System.out.println(b[1]);
 	}
 	/*
 	 * 将int转为低字节在前，高字节在后的byte数组
