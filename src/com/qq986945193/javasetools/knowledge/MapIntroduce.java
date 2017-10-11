@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * map的一些简单介绍
+ * map的一些简单介绍.优先使foreach和entrySet
  */
 public class MapIntroduce {
 	public static void main(String[] args) {
